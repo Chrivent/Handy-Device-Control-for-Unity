@@ -1,0 +1,25 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="ConnectionTest.uss" />
+    <ui:ScrollView class="screen" mode="Vertical" horizontal-scroller-visibility="Hidden">
+        <ui:VisualElement class="form">
+            <ui:Label text="핸디 연결 테스트" class="title" />
+            <ui:RadioButtonGroup name="transport" label="연결 방식" choices="Wi-Fi,블루투스 직접 연결" />
+            <ui:VisualElement name="credentials">
+                <ui:TextField name="connection-key" label="Connection Key" password="false" />
+            </ui:VisualElement>
+            <ui:VisualElement name="bluetooth">
+                <ui:Button name="scan" text="기기 검색" />
+                <ui:RadioButtonGroup name="devices" label="기기 선택" />
+            </ui:VisualElement>
+            <ui:Button name="check" text="연결 확인" />
+            <ui:Label name="state" class="state" />
+            <ui:Label name="detail" enable-rich-text="false" />
+            <ui:Label name="profile" />
+            <ui:Label name="latency" />
+            <ui:VisualElement class="actions">
+                <ui:Button name="start" text="2초 동작 테스트" />
+                <ui:Button name="stop" text="정지" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:ScrollView>
+</ui:UXML>

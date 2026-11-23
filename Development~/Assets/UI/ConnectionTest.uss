@@ -1,0 +1,25 @@
+.screen {
+    flex-grow: 1;
+    background-color: rgb(28, 34, 41);
+    color: rgb(230, 235, 240);
+    font-size: 16px;
+}
+.form {
+    width: 92%;
+    max-width: 660px;
+    align-self: center;
+    padding: 24px 8px;
+}
+.title {
+    font-size: 26px;
+    -unity-font-style: bold;
+    margin-bottom: 16px;
+}
+.unity-base-field { margin-bottom: 10px; }
+.unity-label, .unity-base-field__label, .unity-radio-button__text { color: rgb(230, 235, 240); }
+.unity-label { white-space: normal; }
+.unity-button { min-height: 34px; margin-top: 4px; }
+.state { color: rgb(156, 219, 202); margin-top: 18px; -unity-font-style: bold; }
+.warning { color: rgb(255, 196, 119); }
+.actions { flex-direction: row; margin-top: 14px; }
+.actions > .unity-button { flex-grow: 1; }

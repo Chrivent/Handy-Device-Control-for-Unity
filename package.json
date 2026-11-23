@@ -1,0 +1,10 @@
+{
+  "name": "com.handydevicecontrol.unity",
+  "version": "0.3.0",
+  "displayName": "Handy Device Control",
+  "description": "Connect to The Handy over Windows Bluetooth LE or Wi-Fi and control motion from Unity game events.",
+  "unity": "6000.3",
+  "dependencies": {
+    "com.unity.modules.uielements": "1.0.0"
+  }
+}
