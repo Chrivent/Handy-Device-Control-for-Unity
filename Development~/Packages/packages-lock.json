@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.handydevicecontrol.unity": {
-      "version": "file:../..",
+      "version": "file:../../Package",
       "depth": 0,
       "source": "local",
       "dependencies": {

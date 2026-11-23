@@ -1,7 +1,7 @@
 {
     "name": "HandyDeviceControl.Development.Tests.Editor",
     "rootNamespace": "HandyDeviceControl.Development.Tests.Editor",
-    "references": ["HandyDeviceControl"],
+    "references": ["HandyDeviceControl", "Unity.InputSystem"],
     "includePlatforms": ["Editor"],
     "optionalUnityReferences": ["TestAssemblies"],
     "autoReferenced": false

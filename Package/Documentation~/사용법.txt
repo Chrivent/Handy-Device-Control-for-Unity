@@ -2,13 +2,13 @@ Handy Device Control 0.3.0
 
 이 저장소에서 개발하기
 Unity Hub의 Projects → Add에서 이 저장소 안의 Development~ 폴더를 선택하고 Unity 6000.3.28f1로 연다.
-Project 창의 Packages → Handy Device Control → Runtime에서 C# 코드를 수정하면 저장소의 Runtime/ 원본에 바로 반영된다.
+Project 창의 Packages → Handy Device Control → Runtime에서 C# 코드를 수정하면 저장소의 Package/Runtime/ 원본에 바로 반영된다.
 Assets/Scenes/ConnectionTest.unity를 열고 Play를 누르면 Wi-Fi와 블루투스를 테스트할 수 있다. 펌웨어 4 Wi-Fi 테스트에는 Assets/Settings/HandyConnectionSettings.asset에 개발용 Application ID를 입력하고, 실행 화면에서 기기의 Connection Key를 입력한다.
 Window → General → Test Runner의 EditMode에서 Run All을 누르면 패키지와 연결 화면 테스트를 실행한다. 자동 테스트는 실제 기기 없이 실행할 수 있다.
 
 다른 Unity 프로젝트에 설치하기
-Unity 6000.3의 Window → Package Management → Package Manager에서 + → Install package from tarball을 선택하고 com.handydevicecontrol.unity-0.3.0.tgz를 연다. 소스 폴더가 있으면 Install package from disk에서 package.json을 선택해도 된다.
-이 저장소의 루트에 package.json이 있다. 로컬에서는 Install package from disk로 이 파일을 선택한다. 저장소가 GitHub에 올라가면 Install package from git URL에 https://github.com/Chrivent/Handy-Device-Control-for-Unity.git 을 입력할 수 있다.
+Unity 6000.3의 Window → Package Management → Package Manager에서 + → Install package from tarball을 선택하고 com.handydevicecontrol.unity-0.3.0.tgz를 연다.
+로컬 소스를 설치하려면 Install package from disk에서 저장소의 Package/package.json을 선택한다. Git으로 설치할 때는 Install package from git URL에 https://github.com/Chrivent/Handy-Device-Control-for-Unity.git?path=/Package 를 입력한다.
 게임 코드에 별도의 어셈블리 정의(.asmdef)가 있으면 Assembly Definition References에 HandyDeviceControl을 추가한다. C#에서는 다음 두 네임스페이스를 가져온다.
 
     using HandyDeviceControl;
