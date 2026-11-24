@@ -15,7 +15,7 @@ namespace HandyDeviceControl.Tests.Editor {
         protected const string Success = "{\"result\":0}";
         protected const string Online = "{\"connected\":true}";
         protected const string V3Online = "{\"result\":{\"connected\":true}}";
-        protected const string Firmware3 = "{\"fwVersion\":\"3.2.0\",\"fwStatus\":2}";
+        private const string Firmware3 = "{\"fwVersion\":\"3.2.0\",\"fwStatus\":2}";
         protected ScriptedServer Server { get; private set; }
         protected HttpClient Http { get; private set; }
 
