@@ -1,4 +1,5 @@
 {
     "name": "HandyDeviceControl",
-    "rootNamespace": "HandyDeviceControl"
+    "rootNamespace": "HandyDeviceControl",
+    "references": ["UnityEngine.UI"]
 }

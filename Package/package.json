@@ -1,10 +1,16 @@
 {
   "name": "com.handydevicecontrol.unity",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "displayName": "Handy Device Control",
   "description": "Connect to The Handy over Windows Bluetooth LE or Wi-Fi and control motion from Unity game events.",
   "unity": "6000.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chrivent/Handy-Device-Control-for-Unity.git",
+    "directory": "Package"
+  },
   "dependencies": {
+    "com.unity.ugui": "2.0.0",
     "com.unity.modules.uielements": "1.0.0"
   }
 }

@@ -1,4 +1,4 @@
-Handy Device Control 0.3.0
+Handy Device Control 0.4.0
 
 이 저장소에서 개발하기
 Unity Hub의 Projects → Add에서 이 저장소 안의 Development~ 폴더를 선택하고 Unity 6000.3.28f1로 연다.
@@ -7,7 +7,7 @@ Assets/Scenes/ConnectionTest.unity를 열고 Play를 누르면 Wi-Fi와 블루�
 Window → General → Test Runner의 EditMode에서 Run All을 누르면 패키지와 연결 화면 테스트를 실행한다. 자동 테스트는 실제 기기 없이 실행할 수 있다.
 
 다른 Unity 프로젝트에 설치하기
-Unity 6000.3의 Window → Package Management → Package Manager에서 + → Install package from tarball을 선택하고 com.handydevicecontrol.unity-0.3.0.tgz를 연다.
+Unity 6000.3의 Window → Package Management → Package Manager에서 + → Install package from tarball을 선택하고 com.handydevicecontrol.unity-0.4.0.tgz를 연다.
 로컬 소스를 설치하려면 Install package from disk에서 저장소의 Package/package.json을 선택한다. Git으로 설치할 때는 Install package from git URL에 https://github.com/Chrivent/Handy-Device-Control-for-Unity.git?path=/Package 를 입력한다.
 게임 코드에 별도의 어셈블리 정의(.asmdef)가 있으면 Assembly Definition References에 HandyDeviceControl을 추가한다. C#에서는 다음 두 네임스페이스를 가져온다.
 
@@ -48,4 +48,6 @@ BLE를 쓰는 동안 Update에서 session.CheckBluetoothConnection()을 호출�
 씬 종료 전에 진행 중인 동작의 StopAsync()를 기다린다. 정지 결과를 확인한 뒤 세션을 Dispose()한다.
 
 연결 화면
-HandyDeviceControl.UI의 HandyConnectionPanel과 HandyConnectionSettings를 사용할 수 있다. 설정 에셋은 Create → Handy Device Control → Connection Settings에서 만들고 각 앱의 Application ID를 입력한다. 연결 패널은 같은 오브젝트의 UIDocument에서 credentials·bluetooth 영역, transport·devices 선택 목록, connection-key 입력란, state·detail·latency·profile 라벨, check·start·stop·scan 버튼을 이름으로 찾는다.
+Packages/Handy Device Control/Runtime/Prefabs/UI/HandyConnectionScreen.prefab을 씬에 배치하고 Handy Connection Canvas의 Settings에 앱의 HandyConnectionSettings 에셋을 연결한다. 씬에는 사용하는 입력 방식에 맞는 EventSystem 하나를 둔다. Development~/Assets/Scenes/ConnectionTest.unity에서 완성된 예시를 확인할 수 있다.
+연결 입력은 HandyConnectionForm, 연결 상태와 정지 버튼은 HandyConnectionStatus, 검색된 기기 한 줄은 Parts/HandyDeviceOption 프리팹에서 편집한다. 다른 화면 안에 배치할 때는 연결 상태를 유지할 화면 루트에 HandyConnectionCanvas를 붙이고 Form과 Status에 두 프리팹 인스턴스를 연결한다. 그러면 설정 탭을 숨겨도 정지 버튼과 연결 상태를 사용할 수 있다.
+UI Toolkit 기반으로 배포한 프로젝트에는 기존 HandyConnectionPanel 컴포넌트와 UIDocument 연결 방식도 지원한다. 두 방식에서 Session, Changed, StopRequested, TakeReadySession()을 사용할 수 있다.
